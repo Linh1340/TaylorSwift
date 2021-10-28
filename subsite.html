@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Events</title>
+    <style>
+               :root{
+            --maincolor:#960617;
+            --navmenuheight:35px;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            background:#e2e2e2;
+        }
+        body{
+            width:1450px;
+            background:#D5C0B5;
+            margin: 0 auto; 
+            padding: 0 8px;
+        }
+        body{
+            width:1450px;
+            background:#D5C0B5;
+            margin: 0 auto; 
+            padding: 0 8px;
+        }
+        #menu{
+            height: var(--navmenuheight);
+            background: #70000E;
+            position: relative; 
+        }
+        #menu .mainmenu{
+            height: 100%;
+            margin-left:350px;
+            float:left;
+        }
+        #menu .mainmenu>ul{
+            list-style-type: none;
+            height:100%;
+        }
+        #menu .mainmenu>ul>li{  
+            float:left;
+            height: 100%;
+            line-height: var(--navmenuheight);
+            font-weight: bold;
+            text-transform: uppercase;
+            color:#D5C0B5;
+            font-size:0.7rem;
+            margin-left:30px;
+            position: relative;
+        }
+        #menu .mainmenu>ul>li:hover{
+            color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        /*xxxxxxxxxxxxxxxxxxxxxxxxxx*/
+        #menu .mainmenu>ul>li a{
+            color: #D5C0B5;
+        }
+        #menu .mainmenu>ul>li:hover a{
+            color: white;
+            text-decoration: none;
+        }
+        #menu .mainmenu>ul>li>ul{
+            list-style-type:none;
+            width:250px;
+            position:absolute;
+            background: var(--maincolor);
+            left:0;
+            display:none;
+            z-index: 1;
+        }
+        #menu .mainmenu>ul>li:hover >ul{
+            display: block;
+        } 
+        #menu .mainmenu>ul>li>ul>li{
+            font-size: 0.7rem;
+            text-transform: none;
+            font-weight: bold;
+            height:40px;
+            background:var(--maincolor);
+            color:#D5C0B5;
+            text-align: left;
+            padding: 0 10px;
+            white-space:nowrap;
+            position:relative;
+        }
+        #menu .mainmenu>ul>li>ul>li:hover >ul{
+            display: block;
+            color:white;
+        }
+        #menu .mainmenu>ul>li>ul>li:hover{
+            background: #70000E;
+            color: white;
+            animation: slide 2s;
+        }
+        #menu .mainmenu>ul>li>ul>li>ul{
+            list-style-type: none;
+            text-decoration: none;
+            display: none;
+            position: absolute;
+            width:250px;
+            z-index: 20;
+            background: var(--maincolor);
+        }
+        #menu .mainmenu>ul>li>ul>li>ul>li{
+            font-size: 0.7rem;
+            text-transform: none;
+            font-weight: bold;
+            height:35px;
+            background:var(--maincolor);
+            color:#D5C0B5;
+            text-align: left;
+            padding: 0 10px;
+            white-space:nowrap;
+            position:relative; 
+        }
+        #menu .mainmenu>ul>li>ul>li>ul>li>a{
+            color:#D5C0B5;
+        }
+        #menu .mainmenu>ul>li>ul>li>ul>li:hover a{
+            display: block;
+            color: white;
+        }
+        #menu .mainmenu>ul>li>ul>li>ul>li:hover{
+            background: #70000E;
+            color: white;
+            animation: slide 2s;
+        }
+        @keyframes slide {
+            0%{left: -10px;}
+            20%{left:6px}
+            40%{left:-6px}
+            60%{left:4px}
+            80%{left:-2px}
+            100%{left:0px}
+        }
+        #menu .shoppingcart{
+            float:left;
+            margin-left: 50px;
+            margin-top: 6px;
+        }
+        #menu .shoppingcart{
+            float:left;
+            width: 40px;
+            height: 25px;
+            margin-top: 5px;
+            background:#D0B7A3;
+            margin-left: 30px;
+            border-radius: 13px;
+        }
+        #menu .shoppingcart span{
+            float: left;
+            color:#70000E;
+            font-size: 1rem;
+            display: block;
+            margin-top: 3px;
+            margin-left: 9px;
+        }
+        #events{
+            height: 820px;
+        }
+        #events p{
+            text-align:center;
+            color: ##960617;
+            font-size: 20px;
+            width: 1000px;
+            margin-top: 50px;
+            margin-left:220px;
+        }
+        #events p img{
+            width:1000px ;
+        }
+        #footer{
+            height:200px;
+            background:var(--maincolor);
+        }  
+        #footer .left-footer{
+            width: 698px;
+            height:100%;
+            color:#D5C0B5;
+            float:left;
+            position:relative;
+            margin-left: 300px;
+            margin-top: 30px;
+        }
+        #footer .left-footer a{
+            text-decoration: none;
+            color: #D5C0B5;
+        }
+        #footer .left-footer:hover p{
+            color: white;
+        }
+        #footer .right-footer{
+            height:100%;
+            padding-top: 20px;
+            font-size: 16.5px;
+        }
+        #footer .right-footer:hover p{
+            color: white;
+        }
+        #footer .right-footer .fa{
+            color:#D5C0B5 ;
+            font-size: 16.5px;
+            width: 100px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <div class="mainmenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>About</li>
+                <li>Listen
+                    <ul>
+                        <li>Singles
+                        <li>Albums
+                            <ul class="sub-albums">
+                                <li><a href="https://open.spotify.com/album/2rU7u7C2v5i45MFVxx7xG1?si=YGy2J_qzQmKM8kAqHNlq5w">Taylor Swift</a></li>
+                                <li><a href="https://open.spotify.com/album/4hDok0OAJd57SGIT8xuWJH?si=0jlGGUWoRGqzCiifNNhUHg">Fearless</a></li>
+                                <li><a href="https://open.spotify.com/album/6S6JQWzUrJVcJLK4fi74Fw?si=OU1H40eySfmel59BwWVwGg">Speak Now</a></li>
+                                <li><a href="https://open.spotify.com/album/1KVKqWeRuXsJDLTW0VuD29?si=6dEtyrplSc6mgcAEeiJXGA">Red</a></li>
+                                <li><a href="https://open.spotify.com/album/1yGbNOtRIgdIiGHOEBaZWf?si=rYMjpDtvQOymWt61lTTmuw">1989</a></li>
+                                <li><a href="https://open.spotify.com/album/6DEjYFkNZh67HP7R9PSZvv?si=e0GK-MrqRsK6bz7UoS_Oeg">Reputation</a></li>
+                                <li><a href="https://open.spotify.com/album/1NAmidJlEaVgA3MpcPFYGq?si=sNED5yxtRYusaXOjlT1SNQ">Lover</a></li>
+                                <li><a href="https://open.spotify.com/album/1pzvBxYgT6OVwJLtHkrdQK?si=rVYR70uDSd2hFbrRYuNJAg">Folklore</a></li>
+                                <li><a href="https://open.spotify.com/album/6AORtDjduMM3bupSWzbTSG?si=cYfW0cAxTMG3MjsZTNkd3g">Evermore</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>   
+                <li>Watch
+                    <ul>
+                        <li>Music Videos</li>
+                        <li>Documentaries
+                            <ul class="sub-doc">
+                                <li><a href="https://music.apple.com/us/post/1067647855">The 1989 World Tour</a></li>
+                                <li><a href="https://www.netflix.com/vn/title/81026251">Reputation Stadium Tour</a></li>
+                                <li><a href="https://www.netflix.com/vn/title/81028336">Miss Americana</a></li>
+                                <li><a href="https://www.youtube.com/watch?v=_yvMhg2pLf0">Taylor Swift: City of Lover</a></li>
+                                <li><a href="https://disneyplusoriginals.disney.com/movie/folklore-the-long-pond-studio-sessions">Folklore: The Long Pond Sessions</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Merch
+                    <ul>
+                        <li>Music</li>
+                        <li>Shirts</li>
+                        <li>Sweaters/Hoodies</li>
+                        <li>Accessories</li>
+                    </ul>
+                </li>
+                <li><a href="subsite.html">Events</a></li>
+                <li>Newsletter</li>
+            </ul>
+        </div>
+        <div class="shoppingcart">
+            <span class="glyphicon glyphicon-shopping-cart"></span>
+        </div>
+    </div>
+    <div id="events"> 
+        <p><img src="https://s3-ap-southeast-1.amazonaws.com/images.spiderum.com/sp-images/cfd9ca30cf0e11ea952055b64c2d8ab0.jpg" alt=""></p>
+        <p>I love coming on here to tell you good news, or to share a new project with you. It’s not my favorite thing in the world to have to tell you news I’m sad about. I'm so sorry, but I cannot reschedule the shows that we’ve postponed. Although refunds have been available since we first postponed the Lover Fest shows, many of you hung onto your tickets and I too hung onto the idea that we could reschedule.</p>
+        <p>This is an unprecedented pandemic that has changed everyone’s plans and no one knows what the touring landscape is going to look like in the near future. I’m so disappointed that I won’t be able to see you in person as soon as I wanted to. I miss you terribly and can’t wait til we can all safely be at shows together again. </p>
+        <p>Taylor Swift</p>
+    </div>
+    <div id="footer">
+        <div class="left-footer">
+            <p><a href=""> © 2021 Taylor Nation, LLC</a></p>
+            <p><a href=""> Privacy Policy</a></p>
+            <p><a href="">Terms & Conditions</a></p>
+            <p><a href="">Accessibility</a></p>
+            <p><a href="">Do Not Sell My Personal Information</a></p>
+        </div>
+        <div class="right-footer">
+            <p><a href="https://www.facebook.com/TaylorSwift" class="fa fa-facebook"> Facebook</a></p>
+            <p><a href="https://www.youtube.com/taylorswift" class="fa fa-youtube"> Youtube</a></p>
+            <p><a href="https://twitter.com/taylorswift13" class="fa fa-twitter"> Twitter</a></p>
+            <p><a href="https://www.instagram.com/taylorswift/" class="fa fa-instagram">  Instagram</a></p>
+            <p><a href="https://www.snapchat.com/add/taylorswift" class="fa fa-snapchat"> Snapchat</a></p>
+        </div>
+    </div>
+</body>
+</html>
